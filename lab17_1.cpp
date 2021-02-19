@@ -59,15 +59,15 @@ void getCommand(string &command,string &key){
 void searchName(vector<string> names,vector<int> scores,vector<char> grades,string key){
     cout << "---------------------------------\n";
 
-
+    
 
     for (unsigned int i=0;i<names.size();i++){
         if (toUpperStr(names[i])==key){
             cout << names[i] << "'s score = " << scores[i] << endl;
             cout << names[i] << "'s grade = " << grades[i] << endl;
             break;
-        }else if(!(names[i]==key) && i==19){
-            cout << "Cannot found\n";        
+        }else if(!(names[i]==key) && i==names.size()-1){
+            cout << "Cannot found.\n";        
         }
     }
     cout << "---------------------------------\n";
